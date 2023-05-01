@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>注册页面</title>
+<style>
+body {
+  background-color: #eee;  
+} 
+.register-box {
+  width: 500px;
+  padding: 20px;
+  margin: 100px auto;
+  background-color: #fff; 
+  border-radius: 5px;
+}
+.register-box h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.textbox {
+  width: 100%; 
+  overflow: hidden;
+  font-size: 20px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 1px solid #4caf50;
+}
+.textbox i {
+  width: 26px;
+  float: left;
+  text-align: center;  
+}
+.textbox input {
+  border: none;
+  outline: none; 
+  float: left;
+  margin: 0 10px;
+  width: 70%;  
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px; 
+  margin: 10px 0 20px;
+  font-size: 20px;   
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #fff;
+  background-color:  #4caf50;
+  cursor: pointer;
+} 
+</style>
+<script>
+function checkRegister() {
+  var username = document.getElementById("username").value;
+  var password = document.getElementById("password").value;
+  var email = document.getElementById("email").value;     
+  if (username == "" || password == "" || email == "") {
+    alert("请填写完整信息!"); 
+  } else {
+    alert("注册成功!");
+  }
+}
+</script>
+</head>
+<body>  
+<div class="register-box">
+<h1>注册</h1>
+<div class="textbox"> 
+  <i class="fa fa-user" aria-hidden="true"></i>
+  <input type="text" placeholder="用户名" id="username">
+</div>
+<div class="textbox">
+  <i class="fa fa-lock" aria-hidden="true"></i>
+  <input type="password" placeholder="密码" id="password">  
+</div>
+<div class="textbox">
+  <i class="fa fa-envelope-o" aria-hidden="true"></i>
+  <input type="email" placeholder="邮箱" id="email">
+</div> 
+<input type="button" class="btn" value="注册" onclick="checkRegister()">  
+</div>
+</body> 
+</html>
